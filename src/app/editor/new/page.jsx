@@ -14,7 +14,10 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { 
   Download, 
   Copy, 
-  Trash2
+  Trash2,
+  Share,
+  Share2,
+  Save
 } from "lucide-react";
 
 export default function NewEditorPage() {
@@ -92,8 +95,16 @@ export default function NewEditorPage() {
             <Button variant="outline" size="sm" onClick={handleExportMarkdown} title="Export as Markdown">
               <Download className="h-4 w-4" />
             </Button>
+
+            <Button variant="outline" size="sm" title="Save this" disabled>
+              <Save className="h-4 w-4" />
+            </Button>
+
+            <Button variant="outline" size="sm" title="Share this markdown" disabled>
+              <Share2 className="h-4 w-4" />
+            </Button>
             
-            <Button variant="outline" size="sm" onClick={handleClear} title="Clear content">
+            <Button variant="destructive" size="sm" onClick={handleClear} title="Clear content">
               <Trash2 className="h-4 w-4" />
             </Button>
           </div>
@@ -103,7 +114,7 @@ export default function NewEditorPage() {
           <Textarea
             value={markdown}
             onChange={(e) => setMarkdown(e.target.value)}
-            className="min-h-[70vh] font-mono text-sm p-4 rounded-none border-0 resize-none focus-visible:ring-0 border-r"
+            className="min-h-[70vh] font-mono text-sm p-4 rounded-none border-0 resize-none focus-visible:-ring-0"
             placeholder="Start typing your markdown here..."
           />
           <div className="min-h-[70vh] overflow-auto border-l">
