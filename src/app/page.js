@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRightIcon, CheckCircle2Icon, SparklesIcon } from "lucide-react";
+import { ArrowRightIcon, CheckCircle2Icon, Quote, SparklesIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -136,7 +136,7 @@ export default function Home() {
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-background rounded-xl p-8 shadow-sm border relative">
-                <div className="absolute -top-4 -left-4 text-4xl text-primary opacity-20">"</div>
+                <div className="absolute bottom-2 right-2 text-primary opacity-10"><Quote className="size-20"/></div>
                 <p className="mb-6 relative z-10">{testimonial.quote}</p>
                 <div>
                   <p className="font-semibold">{testimonial.author}</p>
@@ -185,5 +185,3 @@ export default function Home() {
     </div>
   );
 }
-
-
