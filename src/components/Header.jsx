@@ -4,6 +4,7 @@ import React from "react";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
 
 export default function Header() {
   return (
@@ -36,6 +37,11 @@ export default function Header() {
                 <NavigationMenuLink className={cn("px-4 py-2")}>
                   Contact Us
                 </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/editor/new">
+                <Button variant="default">New Document</Button>
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
